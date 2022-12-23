@@ -4,7 +4,7 @@ Check all information in the Jupyter Notebook.
 
 ## Background
 
-To find textually similar documents among a large dataset, by defining the similarity as the Jaccard similarity, one should compare documents pair-wise. In fact, that similarity is represented by the ratio between the intersection of two sets with their union. As the magnitude of comparisons for N documents grows with the square of N, a more efficient method consists in comparing only those documents that are likely to be similar. 
+To find textually similar documents among a large dataset, by defining the similarity as the Jaccard similarity, one should compare documents pair-wise. In fact, that similarity is represented by the ratio between the intersection of two sets with their union. As the magnitude of comparisons for N documents grows with the square of N, a more efficient method consists in comparing only those documents that are likely to be similar. This is a three-stage process consisting of shingling, min-hashing and locality-sensitive hashing.
 
 During the shingling phase, a text document is tokenized into k-shingles, e.g. D={abcde}, S(D)={ab, bc, cd, de} for k=2. Having each document represented as a large set of shingles, these can be further reduced into smaller integer vectors called signatures. 
 
